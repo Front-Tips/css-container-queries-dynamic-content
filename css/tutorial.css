@@ -1,0 +1,24 @@
+.container {
+  /* Enable element size computation */
+  container-type: size;
+  container-name: container;
+}
+
+.content::after {
+  /* Default content */
+  content: "📘";
+}
+
+/* Container is larger than 50px in height */
+@container container (height > 50px) {
+  .content::after {
+    content: "📖";
+  }
+}
+
+/* Container is larger than 240px in height */
+@container container (height > 240px) {
+  .content::after {
+    content: "👩‍🍳";
+  }
+}
